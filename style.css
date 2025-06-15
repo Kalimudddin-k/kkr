@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Vardana , Geneva, Tahoma, sans-serif;
+
+}
+
+
+body{
+
+    background-color: rgb(245, 245, 245);
+    overflow-x: hidden;
+
+}
+nav{
+    width: 100%;
+    background-color: white;
+    box-shadow:0px -15px 20px rgba(199,199,199,0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+.logo{
+    padding-left: 5rem;
+    color: crimson;
+    text-transform: uppercase;
+}
+nav ul{
+    padding-right: 5rem;
+}
+nav ul a {
+    text-decoration: none;
+    margin-right: 1.5rem;
+    color: black;
+}
+.cta_btn {
+    background-color: crimson;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+
+}
+header .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+    margin-top: 5rem;
+}
+header  .content .left h1{
+    width: 30%;
+    font-size: 3.8rem;
+    color:rgba(0, 0, 0, 0.63);
+}
+
+
+header .content .right {
+    width: 50%;
+    line-height: 30px;
+}
+
+.mountain {
+    width: 100%;
+    height: 100vh;
+    background: url('./images/mountain.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center;
+    position: relative;
+}
+.mountain .cloud-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+}
+
+.mountain .cloud-2{
+    position: absolute;
+    top: 18%;
+    right: 0;
+    width: 50%;
+}
+.mountain .cloud-3{
+    position: absolute;
+    top: 50%;
+    left: -10;
+    width: 50%;
+}
+.mountain .cloud-4{
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    width: 50%;
+}
+.cloud-float {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cloud-float img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: floating_cloud calc(8s * var(--i)) linear infinite;
+
+}
+
+@keyframes floating_cloud {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+
+}
+.section-2 {
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-2 .left h1{
+    font-size: 2.5rem;
+}
+.section-2 .left h1 span {
+    background-color: crimson;
+    color: white;
+    padding: 0 1rem;
+    border-radius: 50px;
+}
+.section-2 .right {
+    width: 50%;
+}
+.section-2 .right p {
+    line-height: 30px;
+    font-size: .9rem;
+}
+.section-2 .right .info {
+    display: flex;
+    gap: 25px;
+    margin-top: 1rem;
+}
+.section-2 .right .info label {
+    font-size: .8rem;
+}
+.section-2 .right .info h1 {
+    font-size: 1.8rem;
+}
+
+.section-3 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.cloud-float-2 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+.cloud-float-2 img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: floating_cloud calc(2s * var(--i))linear infinite;
+}
+.section-3 .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-3 .content .left {
+    width: 40%;
+
+}
+.section-3 .content .left img {
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+.section-3 .content .right{
+    width: 50%;
+
+}
+.section-3 .content .right h2 {
+    color: crimson;
+    padding: 1rem 0;
+}
+.section-3 .content .right p {
+    line-height: 30px;
+    font-size: .9rem;
+}
+.section-3 .content .right .categories {
+    display: flex;
+    margin-top: 1.5rem;
+    gap: 50px;
+    text-align: center;
+    color: rgb(252,86,86);
+}
+.section-3 .options {
+    background-color: white;
+    font-size: .8rem;
+    box-shadow: inset -2px -2px 20px rgba(249,178,178,0.8),
+    inset 2px 2px 20px rgba(255,193,193,0.5);
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.section-4 {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./images/p13.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-x;
+    filter: grayscale(.7);
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-4 .trek_man {
+    position: absolute;
+    bottom: -20%;
+    transform: scale(1.5);
+    animation: animate_trek_slide 10s linear infinite;
+}
+@keyframes animate_trek_slide {
+    0%{
+        transform: translateX(150%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+
+}
+.section-4 .clouds img {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    right: -15%;
+}
+.section-4 .title {
+    color: white;
+    font-size: 7.5rem;
+    text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.63);
+    transform: translateY(150px);
+    text-align: center;
+
+}
+.section-5 {
+    padding: 5rem;
+    background-color: white;
+}
+.section-5 .content {
+    display: flex;
+    justify-content: space-between;
+}
+.section-5 .content .left h1 {
+    font-size: 2.5rem;
+    padding-top: .2rem;
+    color: rgba(0, 0, 0, 0.603);
+}
+.section-5 .content .right {
+    width: 50%;
+    font-size: .9rem;
+}
+.section-5 .content .right p {
+    line-height: 28px;
+    padding-top: 1rem;
+}
+
+.section-6 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('./images/p9.jpg');
+    background-position: bottom center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.section-6 .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+    color: white;
+    text-shadow: 0px 5px 15px rgba(77,76,76,0.8);
+}
+
+.section-7 {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./images/p5.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-color: white;
+    filter: grayscale(.4);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.section-7 .contact_form {
+    padding: 2rem 5rem;
+    max-width: 80%;
+    width: 40%;
+    box-shadow: 0px 5px 20px rgba(199,199,199,0.8);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-right: 5rem;
+}
+
+.section-7 .contact_form form {
+    width: 95%;
+    margin-top: 1rem;
+}
+.section-7 .contact_form form input {
+    width: 100%;
+    padding: 15px;
+    margin: .5rem 0;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+footer{
+    background-color: white;
+    text-align: center;
+    font-weight: 500;
+    font-size: .8rem;
+    padding: .5rem 0;
+}
